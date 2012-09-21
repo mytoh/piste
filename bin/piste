@@ -100,7 +100,7 @@
 
 
 (define (piste args)
-  (match (car args)
+  (match (cadr args)
     ((or "link" "ln")
      (dot-link))
     ((or "list" "ls")
@@ -109,4 +109,4 @@
 (define (main args)
   (piste args))
 
-;; vim filetype=scheme
+;; vim:filetype=scheme
