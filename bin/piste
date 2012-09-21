@@ -1,17 +1,15 @@
+#!/usr/bin/env gosh
+
 ;; dotfiles manager
 
-(define-module pikkukivi.commands.piste
-  (export
-    piste)
-  (use gauche.process)
-  (use util.list) ; slices
-  (use util.match)
-  (use file.util)
-  (use srfi-1)
-  (require-extension (srfi 1 13))    ; iota
-  (use kirjasto.tiedosto)
-  (use kirjasto.väri))
-(select-module pikkukivi.commands.piste)
+(use gauche.process)
+(use util.list) ; slices
+(use util.match)
+(use file.util)
+(use srfi-1)
+(require-extension (srfi 1 13))    ; iota
+(use kirjasto.tiedosto)
+(use kirjasto.väri)
 
 (define *srcdir* (expand-path "~/local/git/dotfiles"))
 (define piste-file (build-path (home-directory) ".pisterc"))
@@ -107,3 +105,8 @@
      (dot-link))
     ((or "list" "ls")
      (dot-list))))
+
+(define (main args)
+  (piste args))
+
+;; vim filetype=scheme
