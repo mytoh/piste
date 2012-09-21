@@ -12,7 +12,7 @@
 (select-module piste.bin-runner)
 
 (define piste-file (file->sexp-list (build-path (home-directory) ".pisterc")))
-(define *srcdir* (carr piste-file))
+(define *srcdir* (caar piste-file))
 (define *dotfiles*
   (cadar (file->sexp-list piste-file)))
 
