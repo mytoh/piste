@@ -1,11 +1,14 @@
 
 ;; -*- coding: utf-8 -*-
 
-(define-module piste.commands.link
+(define-module piste.commands.list
   (export dot-list)
+  (use util.list) ; slices
+  (use srfi-1)
   (use piste.util)
+  (use piste.env)
   (use file.util))
-(select-module piste.commands.link)
+(select-module piste.commands.list)
 
 
 ;; list

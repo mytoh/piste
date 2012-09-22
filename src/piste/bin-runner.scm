@@ -2,21 +2,15 @@
 (define-module piste.bin-runner
   (export bin-runner)
   (use gauche.process)
-  (use util.list) ; slices
   (use util.match)
   (use file.util)
   (use srfi-1)
   (require-extension (srfi 1 13))    ; iota
-  (use kirjasto.tiedosto)
-  (use kirjasto.väri)
 
   (use piste.util)
+  (use piste.env)
   (use piste.commands))
 (select-module piste.bin-runner)
-
-(define piste-file (file->sexp-list (build-path (home-directory) ".pisterc")))
-(define *srcdir* (expand-path (caar piste-file)))
-(define *dotfiles* (cadar piste-file))
 
 
 ;; link
