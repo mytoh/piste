@@ -5,8 +5,7 @@
   (export dot-list)
   (use util.list) ; slices
   (use srfi-1)
-  (use piste.util)
-  (use piste.env)
+  (use piste)
   (use file.util))
 (select-module piste.commands.list)
 

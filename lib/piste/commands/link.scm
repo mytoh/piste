@@ -1,17 +1,14 @@
 
-(define-module piste.bin-runner
-  (export bin-runner)
-  (use gauche.process)
-  (use util.match)
-  (use file.util)
+
+;; -*- coding: utf-8 -*-
+
+(define-module piste.commands.link
+  (export dot-link)
+  (use util.list) ; slices
   (use srfi-1)
-  (require-extension (srfi 1 13))    ; iota
-
-  (use piste.util)
-  (use piste.env)
-  (use piste.commands))
-(select-module piste.bin-runner)
-
+  (use piste)
+  (use file.util))
+(select-module piste.commands.link)
 
 ;; link
 (define (link-make-symlink files)
@@ -41,11 +38,3 @@
 (define (dot-link)
   (link-make-symlink *dotfiles*))
 
-
-
-(define (bin-runner args)
-  (match (cadr args)
-    ((or "link" "ln")
-     (dot-link))
-    ((or "list" "ls")
-     (dot-list))))
