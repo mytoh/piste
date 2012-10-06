@@ -7,6 +7,7 @@
   (use util.list) ; slices
   (use srfi-1)
   (use piste)
+  (use maali)
   (use file.util))
 (select-module piste.commands.link)
 
@@ -17,7 +18,7 @@
     (let ((file (car files)))
       (cond
         ((file-exists? (path-home-file file))
-         (print (string-append (colour-string 1 file) " exists, skip")))
+         (print (string-append (paint file 1 ) " exists, skip")))
         ((file-is-directory? (sys-dirname (path-home-file file)))
          (link-file-home file))
         (else
@@ -27,7 +28,7 @@
       (link-make-symlink (cdr files)))))
 
 (define (link-file-home file)
-  (print (string-append (colour-string 38 file)
+  (print (string-append (paint file 38 )
                         " linked"))
   (sys-symlink (path-src-file file)
                (path-home-file file)))
