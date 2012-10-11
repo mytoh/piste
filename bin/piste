@@ -1,4 +1,4 @@
-#!/usr/bin/env gosh
+":"; exec gosh -- $0 "$@"
 
 ;; dotfiles manager
 (use piste.cli :prefix cli:)
