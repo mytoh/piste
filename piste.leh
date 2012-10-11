@@ -5,8 +5,8 @@
                                   "bin/piste")
                  :wait #t)
    ;; library sources
-   (copy-directory* (build-path ( *lehti-cache-directory* ) "piste/src")
-                    (build-path ( *lehti-dist-directory* ) "piste/src"))
+   (copy-directory* (build-path ( *lehti-cache-directory* ) "piste/lib")
+                    (build-path ( *lehti-dist-directory* ) "piste/lib"))
    ;; setting files
    (copy-directory* (build-path ( *lehti-cache-directory* ) "piste/etc")
                     (build-path ( *lehti-dist-directory* ) "piste/etc"))))
