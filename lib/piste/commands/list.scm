@@ -41,7 +41,7 @@
         (managed-files (list-managed-symlinks *dotfiles*))
         (not-managed-files (list-not-managed-symlinks *dotfiles*)))
     (print "managed files")
-    (print-list 190 managed-files)
+    (print-list 191 managed-files)
     (newline)
     (print "not symlink")
     (print-list 38 exist-files)
