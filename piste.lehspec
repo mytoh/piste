@@ -1,5 +1,6 @@
 
 (spec
+  '(name "piste")
 '(files ("lib/**/*.scm"
         "bin/*"
         "*.lehspec"
