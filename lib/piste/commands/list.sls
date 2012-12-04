@@ -27,7 +27,7 @@
               ((and (file-exists? (build-path src f))
                     (not (file-exists? dest-file)))
                (display (paint f 39))
-               (display "will be linked")
+               (display " will be linked")
                (newline))
               (else
                 (display (paint f 128))
