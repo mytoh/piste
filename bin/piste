@@ -1,10 +1,14 @@
-":"; exec gosh -- $0 "$@"
+#!/usr/bin/env mosh
 
-;; dotfiles manager
-(use piste.cli :prefix cli:)
-
+(import
+  (rnrs)
+  (prefix (piste cli)
+          cli.))
 
 (define (main args)
-  (cli:runner args))
+  (cli.runner args)
+  )
 
-;; vim:filetype=scheme
+(main (command-line))
+
+;; vim: filetype=scheme

@@ -1,7 +1,6 @@
 
-("~/local/git/dotfiles" ; directory conatis files
- ;; list of files to be linked
- ( ".vim"
+;; list of files to be linked
+( ".vim"
   ".config/fish/config.fish"
   ".config/fish/freebsd.fish"
   ".config/fish/mac.fish"
@@ -54,6 +53,6 @@
   ".zshrc"
   ".dzen"
   ".rlwrap/gosh_completions"
-  ))
+  )
 
 ;; vim:filetype=scheme

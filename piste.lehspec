@@ -1,8 +1,11 @@
 
 (spec
-  '(name "piste")
-'(files ("lib/**/*.scm"
-        "bin/*"
-        "*.lehspec"
-        "readme*"
-        "test/**/*.scm")))
+  (name "piste")
+  (description "link your dotfiles")
+  (homepage "http://github.com/mytoh/piste")
+  (files ("lib/piste/cli.sls"
+           "lib/piste/commands.sls"
+           "lib/piste/commands/link.sls"
+           "lib/piste/commands/list.sls"
+          "piste.lehspec"
+          )))
