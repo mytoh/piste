@@ -4,14 +4,14 @@
     runner)
   (import
     (rnrs)
-    (match)
+    (loitsu cli)
     (piste commands)
     )
 
   (begin
 
     (define (runner args)
-      (match (cadr args)
+      (match-short-command (cadr args)
         ("list"
          (list-files args))
         ("link"
