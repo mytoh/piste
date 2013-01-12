@@ -4,7 +4,7 @@
     list-files
     link)
   (import
-    (rnrs)
+    (silta base)
     (piste commands list) 
     (piste commands link))
 

@@ -4,7 +4,9 @@
   (export
     list-files)
   (import
-    (rnrs)
+    (silta base)
+    (silta cxr)
+    (silta write)
     (loitsu file)
     (loitsu message)
     (loitsu maali)

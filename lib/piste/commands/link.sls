@@ -3,7 +3,9 @@
   (export
     link)
   (import
-    (rnrs)
+    (silta base)
+    (silta write)
+    (silta cxr)
     (loitsu file)
     (loitsu message)
     (loitsu maali)
