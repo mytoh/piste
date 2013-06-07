@@ -1,12 +1,11 @@
 
 (library (piste cli)
-  (export
-    runner)
+    (export
+      runner)
   (import
     (silta base)
     (loitsu cli)
-    (piste commands)
-    )
+    (piste commands))
 
   (begin
 

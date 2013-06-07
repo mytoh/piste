@@ -1,15 +1,15 @@
 
+
 (library (piste commands link)
-  (export
-    link)
+    (export
+      link)
   (import
     (silta base)
     (silta write)
     (silta cxr)
     (loitsu file)
     (loitsu message)
-    (loitsu maali)
-    )
+    (maali))
 
   (begin
 
@@ -21,21 +21,21 @@
 
     (define (link-files lst src dest)
       (for-each
-        (lambda (f)
-          (let ((dest-file (build-path dest f)))
-            (ensure-directory (path-dirname dest-file))
-            (cond
-              ((and (file-exists? (build-path src f))
-                    (not (file-exists? dest-file)))
-               (create-symbolic-link (build-path src f)
-                                     dest-file)
-               (display (paint f 39))
-               (display " linked")
-               (newline))
-              (else
-                (display (paint f 128))
-                (display " exists!")
-                (newline)))))
+          (lambda (f)
+            (let ((dest-file (build-path dest f)))
+              (ensure-directory (path-dirname dest-file))
+              (cond
+                ((and (file-exists? (build-path src f))
+                   (not (file-exists? dest-file)))
+                 (create-symbolic-link (build-path src f)
+                                       dest-file)
+                 (display (paint f 39))
+                 (display " linked")
+                 (newline))
+                (else
+                    (display (paint f 128))
+                  (display " exists!")
+                  (newline)))))
         lst))
 
 
@@ -56,7 +56,7 @@
                        dotdir
                        targetdir))
           (else
-            (display "create .pisterc file in your home directory")
+              (display "create .pisterc file in your home directory")
             (newline)))))
 
     ))
